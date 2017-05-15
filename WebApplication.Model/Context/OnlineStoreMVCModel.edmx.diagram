@@ -5,15 +5,29 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="b7396b583b394472b478772ab682b331" Name="Diagram1">
-        <EntityTypeShape EntityType="OnlineStoreMVCModel.CMSCategory" Width="1.5" PointX="0.75" PointY="6.625" />
-        <EntityTypeShape EntityType="OnlineStoreMVCModel.CMSNews" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="OnlineStoreMVCModel.ShareCategory" Width="1.5" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="OnlineStoreMVCModel.Image" Width="1.5" PointX="0.75" PointY="1.875" />
-        <EntityTypeShape EntityType="OnlineStoreMVCModel.SystemConfig" Width="1.5" PointX="5.75" PointY="4.75" />
-        <EntityTypeShape EntityType="OnlineStoreMVCModel.Menu" Width="1.5" PointX="2.75" PointY="6.75" />
-        <EntityTypeShape EntityType="OnlineStoreMVCModel.Profile" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.cms_Categories" Width="1.5" PointX="5.25" PointY="15.75" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.cms_News" Width="1.5" PointX="7.5" PointY="11.125" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.ecom_Brands" Width="1.5" PointX="0.75" PointY="3.5" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.ecom_Categories" Width="1.5" PointX="0.75" PointY="11" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.ecom_OrderDetails" Width="1.5" PointX="5.25" PointY="7" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.ecom_Orders" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.ecom_ProductGroups" Width="1.5" PointX="0.75" PointY="7.875" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.ecom_Products" Width="1.5" PointX="3" PointY="5.75" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.share_Categories" Width="1.5" PointX="5.75" PointY="1.5" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.share_Images" Width="1.5" PointX="5.25" PointY="11.75" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.system_Banners" Width="1.5" PointX="7.5" PointY="16.875" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.system_Config" Width="1.5" PointX="7.75" PointY="1.5" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.system_Menu" Width="1.5" PointX="7.75" PointY="4.5" />
+        <EntityTypeShape EntityType="OnlineStoreMVCModel.system_Profiles" Width="1.5" PointX="9.75" PointY="1.5" />
         <AssociationConnector Association="OnlineStoreMVCModel.FK_cms_News_cms_Categories" />
         <AssociationConnector Association="OnlineStoreMVCModel.FK_cms_News_share_Images" />
+        <AssociationConnector Association="OnlineStoreMVCModel.FK_ecom_Products_ecom_Brands" />
+        <AssociationConnector Association="OnlineStoreMVCModel.FK_ecom_OrderDetails_ecom_Products" />
+        <AssociationConnector Association="OnlineStoreMVCModel.FK_product_OrderDetails_product_Orders" />
+        <AssociationConnector Association="OnlineStoreMVCModel.FK_system_Banners_share_Images" />
+        <AssociationConnector Association="OnlineStoreMVCModel.ecom_Products_Categories" />
+        <AssociationConnector Association="OnlineStoreMVCModel.ecom_Products_Images" />
+        <AssociationConnector Association="OnlineStoreMVCModel.ecom_Products_ProductGroups" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

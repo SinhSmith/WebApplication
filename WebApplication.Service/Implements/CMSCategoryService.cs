@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using WebApplication.Model.Context;
 using WebApplication.Model.Mappers;
 using WebApplication.Model.ViewModels;
 using WebApplication.Repository.Interfaces;
@@ -101,15 +100,7 @@ namespace WebApplication.Service.Implements
         {
             try
             {
-                var category = _cmsCategoryRepository.Find(id);
-                if (category != null)
-                {
-                    _cmsCategoryRepository.Delete(category);
-                    _cmsCategoryRepository.Save();
-                    return true;
-                }
-
-                return false;
+                return _cmsCategoryRepository.Delete(id);
             }
             catch (Exception ex)
             {

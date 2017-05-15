@@ -12,26 +12,19 @@ namespace WebApplication.Model.Context
     using System;
     using System.Collections.Generic;
     
-    public partial class CMSNews
+    public partial class system_Menu
     {
         public int Id { get; set; }
-        public int CategoryId { get; set; }
-        public Nullable<int> CoverImageId { get; set; }
-        public string Title { get; set; }
-        public string SubTitle { get; set; }
-        public string ContentNews { get; set; }
-        public string Authors { get; set; }
-        public string Tags { get; set; }
-        public Nullable<int> TotalView { get; set; }
-        public Nullable<bool> DisplayHomePage { get; set; }
+        public string Name { get; set; }
+        public string Url { get; set; }
         public Nullable<int> SortOrder { get; set; }
+        public string Target { get; set; }
+        public Nullable<int> Type { get; set; }
+        public string Icon { get; set; }
         public Nullable<int> Status { get; set; }
         public Nullable<System.Guid> CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<System.Guid> ModifiedBy { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
-    
-        public virtual CMSCategory CMSCategory { get; set; }
-        public virtual Image Image { get; set; }
     }
 }

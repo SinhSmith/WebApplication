@@ -1,12 +1,9 @@
-﻿using OnlineStore.Model.Context;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using WebApplication.Model.Context;
 
-namespace OnlineStore.Model.ViewModel
+namespace WebApplication.Model.ViewModels
 {
     public class ProductSummaryViewModel
     {
@@ -76,16 +73,16 @@ namespace OnlineStore.Model.ViewModel
         public int[] ProductGroupId { get; set; }
 
         [DisplayName("Danh mục sản phẩm")]
-        public IEnumerable<ecom_Categories> Categories { get; set; }
+        public IEnumerable<CategoryViewModel> Categories { get; set; }
         [DisplayName("Nhóm sản phẩm")]
-        public IEnumerable<ecom_ProductGroups> ProductGroups { get; set; }
+        public IEnumerable<ProductGroupViewModel> ProductGroups { get; set; }
         public IEnumerable<ImageProductViewModel> share_Images { get; set; }
     }
 
     public class LoadListImageProductPartialViewModels
     {
         public int ProductId;
-        public IEnumerable<share_Images> Images;
+        public IEnumerable<ImageProductViewModel> Images;
     }
 
     public class ListImageProductPartialViewModels
@@ -101,6 +98,5 @@ namespace OnlineStore.Model.ViewModel
         public string ImageName { get; set; }
         public string ImagePath { get; set; }
         public bool IsActive { get; set; } 
-
     }
 }

@@ -12,17 +12,20 @@ namespace WebApplication.Model.Context
     using System;
     using System.Collections.Generic;
     
-    public partial class Image
+    public partial class cms_Categories
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Image()
+        public cms_Categories()
         {
-            this.News = new HashSet<CMSNews>();
+            this.cms_News = new HashSet<cms_News>();
         }
     
         public int Id { get; set; }
-        public string ImageName { get; set; }
-        public string ImagePath { get; set; }
+        public Nullable<int> ParentId { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Url { get; set; }
+        public Nullable<int> SortOrder { get; set; }
         public Nullable<int> Status { get; set; }
         public Nullable<System.Guid> CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
@@ -30,6 +33,6 @@ namespace WebApplication.Model.Context
         public Nullable<System.DateTime> ModifiedDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CMSNews> News { get; set; }
+        public virtual ICollection<cms_News> cms_News { get; set; }
     }
 }

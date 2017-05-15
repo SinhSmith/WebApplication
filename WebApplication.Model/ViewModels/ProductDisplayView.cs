@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace OnlineStore.Model.ViewModel
+namespace WebApplication.Model.ViewModels
 {
     public class ProductSummaryView
     {
@@ -33,7 +29,6 @@ namespace OnlineStore.Model.ViewModel
         public decimal Price { get; set; }
         public string BrandName { get; set; }
         public ImageInfor CoverImageUrl { get; set; }
-        //public string SmallCoverImageUrl { get; set; }
         public string Description { get; set; }
         public string Description2 { get; set; }
         public string Specification { get; set; }

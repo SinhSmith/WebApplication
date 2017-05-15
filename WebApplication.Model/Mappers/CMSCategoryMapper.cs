@@ -9,27 +9,27 @@ namespace WebApplication.Model.Mappers
 {
     public class CMSCategoryMapper
     {
-        public static IList<CMSCategoryViewModel> ConvertListCMSCategoryToListCMSCategoryViewModel(IList<CMSCategory> categories)
+        public static IList<CMSCategoryViewModel> ConvertListCMSCategoryToListCMSCategoryViewModel(IList<cms_Categories> categories)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<CMSCategory, CMSCategoryViewModel>());
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<cms_Categories, CMSCategoryViewModel>());
             var mapper = config.CreateMapper();
             var result = mapper.Map<IList<CMSCategoryViewModel>>(categories);
 
             return result;
         }
 
-        public static CMSCategoryViewModel ConvertCMSCategoryToCMSCategoryViewModel(CMSCategory category)
+        public static CMSCategoryViewModel ConvertCMSCategoryToCMSCategoryViewModel(cms_Categories category)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<CMSCategory, CMSCategoryViewModel>());
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<cms_Categories, CMSCategoryViewModel>());
             var mapper = config.CreateMapper();
             var result = mapper.Map<CMSCategoryViewModel>(category);
 
             return result;
         }
 
-        public static CMSCategory ConvertCMSCategoryViewModelToCMSCategory(CMSCategoryViewModel viewModel)
+        public static cms_Categories ConvertCMSCategoryViewModelToCMSCategory(CMSCategoryViewModel viewModel)
         {
-            return new CMSCategory
+            return new cms_Categories
             {
                 ParentId = viewModel.ParentId,
                 Title = viewModel.Title,

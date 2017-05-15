@@ -12,7 +12,7 @@ namespace WebApplication.Model.Context
     using System;
     using System.Collections.Generic;
     
-    public partial class Profile
+    public partial class system_Profiles
     {
         public System.Guid UserId { get; set; }
         public string UserName { get; set; }

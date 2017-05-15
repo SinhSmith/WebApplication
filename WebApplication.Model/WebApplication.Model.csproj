@@ -55,16 +55,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\CMSCategory.cs">
+    <Compile Include="Context\cms_Categories.cs">
       <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\CMSNews.cs">
+    <Compile Include="Context\cms_News.cs">
       <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\Image.cs">
+    <Compile Include="Context\ecom_Brands.cs">
       <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\Menu.cs">
+    <Compile Include="Context\ecom_Categories.cs">
+      <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ecom_OrderDetails.cs">
+      <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ecom_Orders.cs">
+      <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ecom_ProductGroups.cs">
+      <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ecom_Products.cs">
       <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\OnlineStoreMVCModel.Context.cs">
@@ -82,19 +94,49 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OnlineStoreMVCModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Context\Profile.cs">
+    <Compile Include="Context\share_Categories.cs">
       <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\ShareCategory.cs">
+    <Compile Include="Context\share_Images.cs">
       <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\SystemConfig.cs">
+    <Compile Include="Context\system_Banners.cs">
       <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Context\system_Config.cs">
+      <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\system_Menu.cs">
+      <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\system_Profiles.cs">
+      <DependentUpon>OnlineStoreMVCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mappers\BrandMapper.cs" />
+    <Compile Include="Mappers\CategoryMapper.cs" />
+    <Compile Include="Mappers\CMSNewsMapper.cs" />
     <Compile Include="Mappers\CMSCategoryMapper.cs" />
+    <Compile Include="Mappers\ProductGroupMapper.cs" />
+    <Compile Include="Mappers\ProductMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BannerViewModel.cs" />
+    <Compile Include="ViewModels\BrandManagement.cs" />
+    <Compile Include="ViewModels\BrandManagementView.cs" />
+    <Compile Include="ViewModels\CategoryManagement.cs" />
+    <Compile Include="ViewModels\CategoryView.cs" />
     <Compile Include="ViewModels\CMSCategoryViewModel.cs" />
+    <Compile Include="ViewModels\CMSNewsView.cs" />
     <Compile Include="ViewModels\CMSNewsViewModel.cs" />
+    <Compile Include="ViewModels\EmailModel.cs" />
+    <Compile Include="ViewModels\MenuView.cs" />
+    <Compile Include="ViewModels\Order.cs" />
+    <Compile Include="ViewModels\OrderManagementViewModel.cs" />
+    <Compile Include="ViewModels\ProductDisplay.cs" />
+    <Compile Include="ViewModels\ProductDisplayView.cs" />
+    <Compile Include="ViewModels\ProductGroupManagement.cs" />
+    <Compile Include="ViewModels\ProductGroupViewModel.cs" />
+    <Compile Include="ViewModels\ProductManagement.cs" />
+    <Compile Include="ViewModels\ProductManagementView.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

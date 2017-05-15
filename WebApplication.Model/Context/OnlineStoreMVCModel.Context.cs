@@ -26,12 +26,19 @@ namespace WebApplication.Model.Context
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CMSCategory> CMSCategories { get; set; }
-        public virtual DbSet<CMSNews> CMSNews { get; set; }
-        public virtual DbSet<ShareCategory> ShareCategories { get; set; }
-        public virtual DbSet<Image> Images { get; set; }
-        public virtual DbSet<SystemConfig> SystemConfigs { get; set; }
-        public virtual DbSet<Menu> Menus { get; set; }
-        public virtual DbSet<Profile> Profiles { get; set; }
+        public virtual DbSet<cms_Categories> cms_Categories { get; set; }
+        public virtual DbSet<cms_News> cms_News { get; set; }
+        public virtual DbSet<ecom_Brands> ecom_Brands { get; set; }
+        public virtual DbSet<ecom_Categories> ecom_Categories { get; set; }
+        public virtual DbSet<ecom_OrderDetails> ecom_OrderDetails { get; set; }
+        public virtual DbSet<ecom_Orders> ecom_Orders { get; set; }
+        public virtual DbSet<ecom_ProductGroups> ecom_ProductGroups { get; set; }
+        public virtual DbSet<ecom_Products> ecom_Products { get; set; }
+        public virtual DbSet<share_Categories> share_Categories { get; set; }
+        public virtual DbSet<share_Images> share_Images { get; set; }
+        public virtual DbSet<system_Banners> system_Banners { get; set; }
+        public virtual DbSet<system_Config> system_Config { get; set; }
+        public virtual DbSet<system_Menu> system_Menu { get; set; }
+        public virtual DbSet<system_Profiles> system_Profiles { get; set; }
     }
 }

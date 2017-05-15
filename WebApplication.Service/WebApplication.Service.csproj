@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implements\CMSCategoryService.cs" />
+    <Compile Include="Implements\CMSNewsService.cs" />
+    <Compile Include="Interfaces\ICMSNewsService.cs" />
     <Compile Include="Interfaces\ICMSCategoryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

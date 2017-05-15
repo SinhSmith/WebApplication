@@ -2,7 +2,7 @@
 
 namespace WebApplication.Model.ViewModels
 {
-	public class CMSNewsViewModel
+    public class CMSNewsViewModel
 	{
 		public int Id { get; set; }
 		public int CategoryId { get; set; }
