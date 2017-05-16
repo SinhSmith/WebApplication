@@ -13,11 +13,11 @@ namespace WebApplication.Repository.Implements
         {
         }
 
-        public IList<cms_News> GetCMSNews(int pageNumber, int pageSize, out int totalItems)
+        public IList<cms_News> GetCMSNews(string keyword, int pageNumber, int pageSize, out int totalItems)
         {
-            totalItems = dbSet.Count(x => x.Status != (int)Define.Status.Delete);
+            totalItems = dbSet.Count(x => x.Status != (int)Define.Status.Delete && (string.IsNullOrEmpty(keyword) || x.Title.Contains(keyword)));
 
-            return dbSet.Include("cms_Categories").Include("share_Images").Where(x => x.Status != (int)Define.Status.Delete)
+            return dbSet.Include("cms_Categories").Include("share_Images").Where(x => x.Status != (int)Define.Status.Delete && (string.IsNullOrEmpty(keyword) || x.Title.Contains(keyword)))
                     .OrderByDescending(x => x.SortOrder).ThenByDescending(x => x.CreatedDate)
                     .Skip(pageSize * (pageNumber - 1)).Take(pageSize)
                     .Select(x => x).ToList();

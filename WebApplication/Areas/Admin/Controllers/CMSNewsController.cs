@@ -28,7 +28,7 @@ namespace WebApplication.Areas.Admin.Controllers
         {
             var availableCategories = new List<SelectListItem>();
             int totalItems = 0;
-            var categories = _cmsCategoryService.GetCMSCategories(1, int.MaxValue, out totalItems);
+            var categories = _cmsCategoryService.GetCMSCategories(string.Empty, 1, int.MaxValue, out totalItems);
             foreach (var c in categories)
             {
                 if (c.Id != selectedItemId)
@@ -47,7 +47,7 @@ namespace WebApplication.Areas.Admin.Controllers
         public ActionResult Index(string keyword, int page = 1)
         {
             int totalItems = 0;
-            var categories = _cmsNewsService.GetCMSNews(page, Define.PAGE_SIZE, out totalItems);
+            var categories = _cmsNewsService.GetCMSNews(keyword, page, Define.PAGE_SIZE, out totalItems);
 
             IPagedList<CMSNewsViewModel> pageNews = new StaticPagedList<CMSNewsViewModel>(categories, page, Define.PAGE_SIZE, totalItems);
             return View(pageNews);

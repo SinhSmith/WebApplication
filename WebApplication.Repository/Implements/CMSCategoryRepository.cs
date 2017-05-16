@@ -12,11 +12,11 @@ namespace WebApplication.Repository.Implements
         {
         }
 
-        public IList<cms_Categories> GetCMSCategories(int pageNumber, int pageSize, out int totalItems)
+        public IList<cms_Categories> GetCMSCategories(string keyword, int pageNumber, int pageSize, out int totalItems)
         {
-            totalItems = dbSet.Count(x => x.Status != (int)Define.Status.Delete);
+            totalItems = dbSet.Count(x => x.Status != (int)Define.Status.Delete && (string.IsNullOrEmpty(keyword) || x.Title.Contains(keyword)));
 
-            return dbSet.Where(x => x.Status != (int)Define.Status.Delete)
+            return dbSet.Where(x => x.Status != (int)Define.Status.Delete && (string.IsNullOrEmpty(keyword) || x.Title.Contains(keyword)))
                     .OrderBy(x => x.ParentId).ThenBy(x => x.SortOrder)
                     .Skip(pageSize * (pageNumber - 1)).Take(pageSize)
                     .Select(x => x).ToList();

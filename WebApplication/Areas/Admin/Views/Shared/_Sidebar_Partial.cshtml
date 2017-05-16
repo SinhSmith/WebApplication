@@ -26,14 +26,49 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
+
+            <li class="treeview active">
+                <a href="#">
+                    <i class="fa fa-edit"></i> <span>CMS</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="@Url.Action("Index", "CMSCategory")">
+                            <i class="fa fa-circle-o"></i> <span>Category</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "CMSNews")">
+                            <i class="fa fa-circle-o"></i> <span>News</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             
-            <li> @Html.ActionLink(" Category", "Index", "Categories", null, new { @class = "fa fa-book" })</li>
-            <li> @Html.ActionLink(" Product", "Index", "Product", null, new { @class = "fa fa-gift" })</li>
-            <li> @Html.ActionLink(" User", "Index", "User", null, new { @class = "fa fa-user" })</li>
-            <li> @Html.ActionLink(" Mail", "Create", "Mail", null, new { @class = "fa fa-pencil" })</li>
-            
+            <li class="treeview active">
+                <a href="#">
+                    <i class="fa fa-edit"></i> <span>Product</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="@Url.Action("Index", "Categories")">
+                            <i class="fa fa-circle-o"></i> <span>Category</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Product")">
+                            <i class="fa fa-circle-o"></i> <span>Product</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </section>
     <!-- /.sidebar -->
 </aside>
-

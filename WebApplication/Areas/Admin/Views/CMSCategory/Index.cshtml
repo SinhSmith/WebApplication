@@ -17,7 +17,18 @@
     <div class="col-md-12">
         <div class="box ">
             <div class="box-header with-border">
-                <h3 class="box-title">Danh sách</h3>
+                <h3 class="box-title">Danh sách (@Model.TotalItemCount.ToString())</h3>
+                <div class="box-tools">
+                    @using (Html.BeginForm("Index", "CMSCategory", FormMethod.Get))
+            {
+                        <div class="input-group input-group-sm" style="width: 250px;">
+                            @Html.TextBox("keyword", null, new { @class = "form-control pull-right", placeholder = "Tìm kiếm" })
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
             <div class="box-body">
                 <table class="table table-bordered">

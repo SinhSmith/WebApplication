@@ -6,7 +6,7 @@ namespace WebApplication.Service.Interfaces
 {
     public interface ICMSNewsService : IDisposable
     {
-        IList<CMSNewsViewModel> GetCMSNews(int pageNumber, int pageSize, out int totalItems);
+        IList<CMSNewsViewModel> GetCMSNews(string keyword, int pageNumber, int pageSize, out int totalItems);
         IList<CMSNewsViewModel> GetCMSNewsByCategoryId(int categoryId, int pageNumber, int pageSize, out int totalItems);
         IList<CMSNewsViewModel> GetRecentCMSNews();
         IList<CMSNewsViewModel> GetRelatedCMSNews(int id);

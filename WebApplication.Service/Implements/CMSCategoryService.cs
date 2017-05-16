@@ -16,9 +16,9 @@ namespace WebApplication.Service.Implements
             _cmsCategoryRepository = cmsCategoryRepository;
         }
 
-        public IList<CMSCategoryViewModel> GetCMSCategories(int pageNumber, int pageSize, out int totalItems)
+        public IList<CMSCategoryViewModel> GetCMSCategories(string keyword, int pageNumber, int pageSize, out int totalItems)
         {
-            var categories = _cmsCategoryRepository.GetCMSCategories(pageNumber, pageSize, out totalItems);
+            var categories = _cmsCategoryRepository.GetCMSCategories(keyword, pageNumber, pageSize, out totalItems);
             return CMSCategoryMapper.ConvertListCMSCategoryToListCMSCategoryViewModel(categories);
         }
 

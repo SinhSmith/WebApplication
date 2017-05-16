@@ -6,7 +6,7 @@ namespace WebApplication.Service.Interfaces
 {
     public interface ICMSCategoryService : IDisposable
     {
-        IList<CMSCategoryViewModel> GetCMSCategories(int pageNumber, int pageSize, out int totalItems);
+        IList<CMSCategoryViewModel> GetCMSCategories(string keyword, int pageNumber, int pageSize, out int totalItems);
 
         bool AddCMSCategory(CMSCategoryViewModel viewModel);
 

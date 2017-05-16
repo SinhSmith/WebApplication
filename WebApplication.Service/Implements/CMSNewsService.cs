@@ -16,9 +16,9 @@ namespace WebApplication.Service.Implements
             _cmsNewsRepository = cmsNewsRepository;
         }
 
-        public IList<CMSNewsViewModel> GetCMSNews(int pageNumber, int pageSize, out int totalItems)
+        public IList<CMSNewsViewModel> GetCMSNews(string keyword, int pageNumber, int pageSize, out int totalItems)
         {
-            var news = _cmsNewsRepository.GetCMSNews(pageNumber, pageSize, out totalItems);
+            var news = _cmsNewsRepository.GetCMSNews(keyword, pageNumber, pageSize, out totalItems);
             return CMSNewsMapper.ConvertListCMSNewsToListCMSNewsViewModel(news);
         }
 
