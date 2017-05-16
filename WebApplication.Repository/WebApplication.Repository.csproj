@@ -55,9 +55,11 @@
     <Compile Include="Implements\CMSCategoryRepository.cs" />
     <Compile Include="Implements\OrderRepository.cs" />
     <Compile Include="Implements\ProductGroupRepository.cs" />
+    <Compile Include="Implements\ImageRepository.cs" />
     <Compile Include="Implements\ProductRepository.cs" />
     <Compile Include="Implements\RepositoryBase.cs" />
     <Compile Include="Interfaces\ICMSNewsRepository.cs" />
+    <Compile Include="Interfaces\IImageRepository.cs" />
     <Compile Include="Interfaces\IProductRepository.cs" />
     <Compile Include="Interfaces\IProductGroupRepository.cs" />
     <Compile Include="Interfaces\IBrandRepository.cs" />

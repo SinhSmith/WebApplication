@@ -11,7 +11,7 @@ namespace WebApplication.Model.Mappers
     {
         public static IList<CMSNewsViewModel> ConvertListCMSNewsToListCMSNewsViewModel(IList<cms_News> news)
         {
-            return news.ToList().Select(x => new CMSNewsViewModel
+            return news.Select(x => new CMSNewsViewModel
             {
                 Id = x.Id,
                 CategoryId = x.CategoryId,

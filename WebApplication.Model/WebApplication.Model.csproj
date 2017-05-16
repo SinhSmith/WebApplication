@@ -114,6 +114,7 @@
     </Compile>
     <Compile Include="Mappers\BrandMapper.cs" />
     <Compile Include="Mappers\CategoryMapper.cs" />
+    <Compile Include="Mappers\ImageMapper.cs" />
     <Compile Include="Mappers\CMSNewsMapper.cs" />
     <Compile Include="Mappers\CMSCategoryMapper.cs" />
     <Compile Include="Mappers\ProductGroupMapper.cs" />

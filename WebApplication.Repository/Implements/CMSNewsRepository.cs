@@ -17,7 +17,7 @@ namespace WebApplication.Repository.Implements
         {
             totalItems = dbSet.Count(x => x.Status != (int)Define.Status.Delete);
 
-            return dbSet.Where(x => x.Status != (int)Define.Status.Delete)
+            return dbSet.Include("cms_Categories").Include("share_Images").Where(x => x.Status != (int)Define.Status.Delete)
                     .OrderByDescending(x => x.SortOrder).ThenByDescending(x => x.CreatedDate)
                     .Skip(pageSize * (pageNumber - 1)).Take(pageSize)
                     .Select(x => x).ToList();

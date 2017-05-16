@@ -54,6 +54,8 @@ namespace WebApplication.Infractructure.Utilities
             Popup = 10
         }
 
+        public const string ImageSavePath = "/Uploads/";
+
         #region Products
         public static class DisplayProductConstants
         {

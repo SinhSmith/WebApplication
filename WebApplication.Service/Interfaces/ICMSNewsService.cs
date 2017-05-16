@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using WebApplication.Model.Context;
 using WebApplication.Model.ViewModels;
 
 namespace WebApplication.Service.Interfaces
